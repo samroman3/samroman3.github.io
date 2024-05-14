@@ -52,7 +52,7 @@ async function fetchPinnedProjects() {
 
 async function build() {
   const projects = await fetchPinnedProjects();
-  const projectsFilePath = path.join(__dirname, 'public', 'projects.json');
+  const projectsFilePath = path.join(__dirname, 'projects.json'); // Save in root directory
 
   fs.writeFileSync(projectsFilePath, JSON.stringify(projects, null, 2), 'utf-8');
   console.log('Projects data saved to projects.json');
