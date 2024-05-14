@@ -1,5 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   const projectsContainer = document.getElementById('projects-container');
+  const toggleSwitch = document.getElementById('toggle-dark-mode');
+
+  toggleSwitch.addEventListener('change', () => {
+      document.body.classList.toggle('dark-mode');
+  });
 
   fetch('projects.json')
       .then(response => response.json())
@@ -22,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
               const projectLink = document.createElement('a');
               projectLink.href = project.repoLink;
-              projectLink.textContent = 'View on GitHub';
+              projectLink.textContent = '->';
               projectLink.target = '_blank';
 
               projectDetails.appendChild(projectTitle);
