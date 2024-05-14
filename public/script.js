@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 projectCard.className = 'project-card';
 
                 const projectImage = document.createElement('img');
-                projectImage.src = project.imageUrl;
+                projectImage.src = project.imageUrl || 'path/to/default/image.png'; // Use a default image if none found
 
                 const projectDetails = document.createElement('div');
                 projectDetails.className = 'project-details';
