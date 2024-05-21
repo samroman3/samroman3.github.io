@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
               const projectLink = document.createElement('a');
               projectLink.href = project.repoLink;
-              projectLink.textContent = 'View on GitHub';
+              projectLink.textContent = 'View';
               projectLink.target = '_blank';
 
               projectDetails.appendChild(projectTitle);

@@ -3,12 +3,12 @@
     "title": "AHAPpy",
     "description": "WAV to AHAP Converter",
     "repoLink": "https://github.com/samroman3/AHAPpy",
-    "imageUrl": "https://github.com/samroman3/AHAPpy/assets/52180475/f9268f85-3a04-4a28-842f-6fb1c6d2240e"
+    "imageUrl": "https://github.com/samroman3/AHAPpy/assets/52180475/40fcaf33-45c9-4dbd-93c7-f8f8057d3125"
   },
   {
     "title": "Edo",
     "description": "Edo is a light-weight, intuitive calorie counting app made using Core-Data and SwiftUI.",
-    "repoLink": "https://github.com/samroman3/Edo",
+    "repoLink": "https://apps.apple.com/us/app/edo-food-diary/id6502533786",
     "imageUrl": "https://github.com/samroman3/eazeat/assets/52180475/9fa792f1-1ea4-4ce1-82c1-3664e275ec6a"
   },
   {
@@ -19,7 +19,7 @@
   },
   {
     "title": "YummyDate",
-    "description": "Minimalistic and customizable date picker framework for iOS, designed with Swift",
+    "description": "Minimal date picker toolbar in SwiftUI",
     "repoLink": "https://github.com/samroman3/YummyDate",
     "imageUrl": "https://github.com/samroman3/YummyDate/assets/52180475/af14cd5a-104b-499b-a22c-bd63a965309a"
   },
