@@ -7,13 +7,13 @@
   },
   {
     "title": "Edo",
-    "description": "Edo is a light-weight, intuitive calorie counting app made using Core-Data and SwiftUI.",
+    "description": "Light-weight, intuitive calorie counting app.",
     "repoLink": "https://apps.apple.com/us/app/edo-food-diary/id6502533786",
     "imageUrl": "https://github.com/samroman3/eazeat/assets/52180475/9fa792f1-1ea4-4ce1-82c1-3664e275ec6a"
   },
   {
     "title": "Strider",
-    "description": "Strider is an open source lightweight step tracking app built with SwiftUI, CMPedometer, CloudKit and Core Data.",
+    "description": "Step tracking app built with SwiftUI, CMPedometer, and CloudKit.",
     "repoLink": "https://github.com/samroman3/Strider",
     "imageUrl": "https://github.com/samroman3/Strider/assets/52180475/5c16dd58-25ac-4903-a87d-2adbac2621d0"
   },
