@@ -5,21 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sam Roman's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="grid-background"></div>
     <div class="container">
         <aside>
-            <h1>Sam Roman</h1>
-            <p>iOS Developer | Swift | Python | JS</p>
-            <p>Building things.</p>
-            <label class="switch">
-                <input type="checkbox" id="toggle-dark-mode">
-                <span class="slider"></span>
-            </label>
+            <div>
+                <h1>Sam Roman</h1>
+                <p>iOS Developer</p>
+                <p>Swift | Python | JS</p>
+            </div>
+            <div>
+                <p>Building things.</p>
+                <label class="switch">
+                    <input type="checkbox" id="toggle-dark-mode">
+                    <span class="slider"></span>
+                </label>
+            </div>
         </aside>
         <main>
-            <h2>---</h2>
+            <h2>Featured Projects</h2>
             <div id="projects-container"></div>
         </main>
     </div>

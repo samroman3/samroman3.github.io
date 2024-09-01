@@ -22,25 +22,41 @@ async function fetchPinnedProjects() {
       const repoLink = `https://github.com/${username}/${title}`;
 
       const readmeUrl = `https://raw.githubusercontent.com/${username}/${title}/main/README.md`;
-      let imageUrl = '';
+      let mediaUrl = '';
+      let mediaType = '';
 
       try {
         const readmeResponse = await axios.get(readmeUrl);
         const readmeContent = readmeResponse.data;
 
-        // Parse README.md and extract the first image URL
         const readmeHtml = marked.parse(readmeContent);
         const readme$ = cheerio.load(readmeHtml);
+        
         const firstImage = readme$('img').first().attr('src');
+        const firstVideo = readme$('video source').first().attr('src') || readme$('video').first().attr('src');
 
-        if (firstImage) {
-          imageUrl = firstImage.startsWith('http') ? firstImage : `${repoLink}/blob/main/${firstImage}?raw=true`;
+        if (firstVideo) {
+          mediaUrl = firstVideo.startsWith('http') ? firstVideo : `${repoLink}/blob/main/${firstVideo}?raw=true`;
+          mediaType = 'video';
+        } else if (firstImage) {
+          mediaUrl = firstImage.startsWith('http') ? firstImage : `${repoLink}/blob/main/${firstImage}?raw=true`;
+          mediaType = 'image';
         }
       } catch (error) {
         console.error(`Error fetching README.md for ${repoLink}:`, error);
       }
 
-      projects.push({ title, description, repoLink, imageUrl });
+      let readmePreview = '';
+
+      try {
+        const readmeResponse = await axios.get(readmeUrl);
+        const readmeContent = readmeResponse.data;
+        readmePreview = readmeContent.split('\n\n').slice(0, 2).join('\n\n');
+      } catch (error) {
+        console.error(`Error fetching README.md for ${repoLink}:`, error);
+      }
+
+      projects.push({ title, description, repoLink, mediaUrl, mediaType, readmePreview });
     }
 
     return projects;
@@ -52,7 +68,8 @@ async function fetchPinnedProjects() {
 
 async function build() {
   const projects = await fetchPinnedProjects();
-  const projectsFilePath = path.join(__dirname, 'projects.json'); // Save in root directory
+  console.log('Fetched projects:', projects);
+  const projectsFilePath = path.join(__dirname, 'projects.json');
 
   fs.writeFileSync(projectsFilePath, JSON.stringify(projects, null, 2), 'utf-8');
   console.log('Projects data saved to projects.json');
