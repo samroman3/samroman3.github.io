@@ -5,7 +5,7 @@
     "repoLink": "https://github.com/samroman3/AHAPpy",
     "mediaUrl": "https://github.com/samroman3/AHAPpy/assets/52180475/40fcaf33-45c9-4dbd-93c7-f8f8057d3125",
     "mediaType": "image",
-    "readmePreview": "# AHAPpy\r\n<img src=\"https://github.com/samroman3/AHAPpy/assets/52180475/40fcaf33-45c9-4dbd-93c7-f8f8057d3125\" width=\"200\" height=\"200\">\r\n\r\n\r\n\r\n## WAV to AHAP Converter\r\n\r\nA Python script that converts audio files (WAV, MP3, OGG etc.) to AHAP (Apple Haptic Audio Pattern) format, which can be used to synchronize audio and haptic effects in games, virtual reality experiences, and interactive multimedia. With a simple GUI, AHAPpyUI.py, to streamline the conversion process. A sample iOS app is available with an example implementation.\r\n\r\n## Inspiration\r\n\r\nThis project was inspired by Lofelt's [NiceVibrations](https://github.com/Lofelt/NiceVibrations), which offers advanced haptic feedback solutions for various applications. I felt a need for an even simpler implementation of haptic-audio synchronization that focused specifically on iOS development, leading to the creation of this AHAP converter.\r\n\r\n## Requirements\r\n- Python 3.x\r\n- [NumPy](https://numpy.org/)\r\n- [Librosa](https://librosa.org/)\r\n- [PyDub](https://github.com/jiaaro/pydub)\r\n- [tkinter](https://docs.python.org/3/library/tkinter.html) - for GUI\r\n\r\n\r\nYou can install the dependencies using pip:\r\n\r\n```bash\r\npip install numpy librosa pydub tkinter\r\n```\r\nor install using the requirements:\r\n\r\n```bash\r\npip install -r requirements.txt\r\n```\r\n\r\n## Usage\r\n### Using generate_ahap.py\r\n\r\nRun the script with the following command:\r\n```bash\r\npython generate_ahap.py input_wav [--output_dir OUTPUT_DIR] [--mode MODE] [--split SPLIT]\r\n```\r\n\r\n--input_wav: Path to the input WAV file.\r\n--output_dir: Directory where the output AHAP files will be saved. Defaults to the same directory as the input WAV file.\r\n--mode: Mode for processing the WAV file. Can be 'sfx' (sound effects) or 'music'. Defaults to 'music'.\r\n--split: Split mode for processing. Options are 'none', 'all', 'vocal', 'drums', 'bass', 'other'. Only applicable when mode is 'music'. Defaults to 'none'.\r\n\r\nExample:\r\n\r\n```bash\r\npython generate_ahap.py example.wav --mode music --split vocal\r\n```\r\n\r\nNew AHAP files will be saved in the specified directory, or the same directory as the WAV file if no output directory is specified.\r\n\r\n### Using AHAPpyUI.py\r\n\r\nAlternatively, you can use the AHAPpyUI.py file, which provides a minimal GUI for the conversion process.\r\n```bash\r\npython AHAPpyUI.py\r\n```\r\n<img width=\"780\" alt=\"Screenshot 2024-05-18 at 9 23 49 PM\" src=\"https://github.com/samroman3/AHAPpy/assets/52180475/99dc5b2a-9547-40c0-adb7-55ce5c1641d5\">\r\n\r\n## Features\r\n- Transient and Continuous Events: The AHAP file contains both transient and continuous haptic events, synchronized with the audio content.\r\n- Dynamic Parameter Calculation: Haptic parameters such as intensity and sharpness are calculated dynamically based on audio features.\r\n- Customizable Parameters: You can adjust thresholds and window sizes to customize the conversion process according to your requirements.\r\n- Music Mode and Splits: In music mode, you can specify different splits such as 'vocal', 'drums', 'bass', and 'other' to process specific components of the audio.\r\n  \r\n### How It Works\r\nThe conversion process involves the following steps:\r\n1. Load Audio: The input WAV file is loaded using PyDub and converted to a NumPy array.\r\n2. Feature Extraction: Audio features such as onsets and spectral centroid are extracted using Librosa.\r\n3. Event Generation: Transient and continuous haptic events are generated based on the audio features.\r\n4. Parameter Calculation: Haptic parameters such as intensity and sharpness are calculated dynamically.\r\n5. Output AHAP: The AHAP content is written in JSON format and saved to same directory as the input file.\r\n \r\nIf AHAPpy has helped you in your own projects I would love to hear about it! If you have any questions, feedback, or suggestions for improvement, feel free to reach out.\r\n\r\n<a href=\"https://www.ko-fi.com/samroman\" target=\"_blank\"><img src=\"https://cdn.buymeacoffee.com/buttons/default-orange.png\" alt=\"Buy Me A Coffee\" height=\"41\" width=\"174\"></a>\r\n\r\n"
+    "year": "2024"
   },
   {
     "title": "Edo",
@@ -13,7 +13,7 @@
     "repoLink": "https://github.com/samroman3/Edo",
     "mediaUrl": "https://github.com/samroman3/eazeat/assets/52180475/9fa792f1-1ea4-4ce1-82c1-3664e275ec6a",
     "mediaType": "image",
-    "readmePreview": "# Edo \n<img src=\"https://github.com/samroman3/eazeat/assets/52180475/9fa792f1-1ea4-4ce1-82c1-3664e275ec6a\" width = \"200\" height = \"200\">\n\n\nAn intuitive way to track your daily eating habits."
+    "year": "2024"
   },
   {
     "title": "Strider",
@@ -21,7 +21,7 @@
     "repoLink": "https://github.com/samroman3/Strider",
     "mediaUrl": "https://github.com/samroman3/Strider/assets/52180475/5c16dd58-25ac-4903-a87d-2adbac2621d0",
     "mediaType": "image",
-    "readmePreview": "# Strider\n<img src=\"https://github.com/samroman3/Strider/assets/52180475/5c16dd58-25ac-4903-a87d-2adbac2621d0\"  width=\"200\" height=\"200\">\n\n**Step tracking app built with SwiftUI, CMPedometer, CloudKit and Core Data.**"
+    "year": "2024"
   },
   {
     "title": "usiku",
@@ -29,7 +29,7 @@
     "repoLink": "https://github.com/samroman3/usiku",
     "mediaUrl": "https://github.com/samroman3/usiku/assets/52180475/934b2de7-dd12-4cf5-8008-32a302b23244",
     "mediaType": "image",
-    "readmePreview": "# Usiku - Dark Mode Safari Extension\r\n<img width=\"145\" alt=\"Untitled\" src=\"https://github.com/samroman3/usiku/assets/52180475/934b2de7-dd12-4cf5-8008-32a302b23244\">\r\n\r\n## Info\r\n\r\nSwahili for \"Night\" or \"Nighttime\", Usiku is a Safari extension that applies theming overlays to any webpage. The idea arose while trying to read a PDF in the browser and I did not have an option to make the document dark mode without first going through some trouble. \r\nWith Usiku you can quickly invert entire pages, light to dark, day and night.\r\n\r\n## Screenshots\r\n**Original**\r\n\r\n<img width=\"150\" alt=\"original-page\" src=\"https://github.com/samroman3/usiku/assets/52180475/672381d6-0a6f-4010-a0f2-dca003a29b1d\">\r\n\r\n**Themes**\r\n- Inverted, Savanna, Usiku, Eclipse\r\n<img width=\"150\" alt=\"inverted-theme\" src=\"https://github.com/samroman3/usiku/assets/52180475/2b28ad42-7198-4639-ac35-a98315a1fc41\">\r\n<img width=\"150\" alt=\"sepia-theme\" src=\"https://github.com/samroman3/usiku/assets/52180475/efb1ff53-d930-4a49-a15e-ee7ef2154134\">\r\n<img width=\"150\" alt=\"sepia-theme\" src=\"https://github.com/samroman3/usiku/assets/52180475/60b281b3-6cad-4112-995d-512931f82192\">\r\n<img width=\"150\" alt=\"sepia-theme\" src=\"https://github.com/samroman3/usiku/assets/52180475/2dd5c168-3a2b-4308-82f7-1120d39daf00\">\r\n"
+    "year": "2024"
   },
   {
     "title": "magic8cube",
@@ -37,7 +37,7 @@
     "repoLink": "https://github.com/samroman3/magic8cube",
     "mediaUrl": "https://github.com/user-attachments/assets/c60cb75b-04a2-4e67-896b-1ddc090c465e",
     "mediaType": "image",
-    "readmePreview": "## Magic 8 Cube\n<img width=\"200\" height=\"200\" alt=\"Screenshot 2024-08-31 at 9 26 57 PM\" src=\"https://github.com/user-attachments/assets/c60cb75b-04a2-4e67-896b-1ddc090c465e\">\n\n\nSwiftUI app insipired by this [widget design](https://x.com/vovaflame/status/1783146108128039123/photo/1)."
+    "year": "2024"
   },
   {
     "title": "FluxBoom",
@@ -45,6 +45,6 @@
     "repoLink": "https://github.com/samroman3/FluxBoom",
     "mediaUrl": "https://github.com/user-attachments/assets/f823c21e-e45d-4dd3-8a41-a28d6ab2203b",
     "mediaType": "image",
-    "readmePreview": "\n<img src=\"https://github.com/user-attachments/assets/f823c21e-e45d-4dd3-8a41-a28d6ab2203b\" width=\"220\" height=\"200\">\n\n"
+    "year": "2024"
   }
 ]
